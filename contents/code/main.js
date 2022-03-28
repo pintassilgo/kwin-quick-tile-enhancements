@@ -199,7 +199,7 @@ function onClientMoved(client) {
     return;
 
   // Client resizing
-  if (!workspace.restoreGeometry && wasResized(client)) {
+  if (wasResized(client)) {
     // Resize grouped clients one final time to make sure their corners touch
     resizeTiledClients(client, workspace.clientGroup);
     snapToScreenEdge(client, workspace.clientScreenEdge);
