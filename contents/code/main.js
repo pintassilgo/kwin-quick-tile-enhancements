@@ -168,7 +168,7 @@ function onClientMove(client) {
  */
 function onClientMoving(client) {
   // Should we care about this client?
-  if (workspace.restoreGeometry || !isActiveFrame(client))
+  if (!isActiveFrame(client))
     return;
 
   // Auto-resize all tiled clients
